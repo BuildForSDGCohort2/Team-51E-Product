@@ -1,0 +1,58 @@
+{
+  "name": "team-letscodeit-product",
+  "version": "1.0.0",
+  "description": "This is a platform that acts as an intermediate between the farmer and consumer (Farmer - Consumer platform).",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2-runtime start ./server/bin/prod",
+    "dev": "node ./server/bin/dev --watch",
+    "test": "mocha --require babel-register ./server/test/*.js --exit",
+    "build": "npm run clean && mkdir dist && babel server -s -d dist",
+    "production": "npm run build && pm2-runtime start ./server/bin/prod",
+    "clean": "rm -rf dist",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildForSDGCohort2/Team-Letscodeit-Product.git"
+  },
+  "author": "otitoju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BuildForSDGCohort2/Team-Letscodeit-Product/issues"
+  },
+  "homepage": "https://github.com/BuildForSDGCohort2/Team-Letscodeit-Product#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babel-watch": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.22.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.0",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.24",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10",
+    "pm2": "^4.4.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.0.1"
+  }
+}

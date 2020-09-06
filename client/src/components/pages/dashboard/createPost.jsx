@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import Header from '../../layouts/Header';
 
 export default class createPost extends Component {
     render() {
         return (
             <div>
+                <Header />
                 <section class="content">
                 <div class="row">
                     <div class="col-md-3">
@@ -46,33 +48,36 @@ export default class createPost extends Component {
                             <div class="card-header">
                                 <h3 class="card-title">Create Post</h3>
                             </div>
-
+                            
                             <div class="container my-5">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-6 col-lg-6 col-xs-6">
-                                        <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
-                                            <form action="" method="post" class="form-box">
-                                                <h3 class="h4 text-black mb-4">Create Post</h3>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Name of product"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Price"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <textarea class="form-control">
-
-                                                    </textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <input type="file" class="form-control" />
-                                                </div>
-                                                <div class="form-group">
-                                                <input type="submit" class="btn btn-primary btn-pill" value="Create post"/>
-                                                </div>
-                                            </form>
-
+                                    <div class="col-md-6 col-lg-12 col-xs-6">
+                                    <div class="card  text-center card-form">
+                                        <div class="header pt-3 grey lighten-2">
+                                            <h3 class="text">Create Post</h3>
                                         </div>
+                                        <div class="card-body">
+                                        
+                                        <form>
+                                            <div class="md-form text-left">
+                                                <label > Name of Product</label>
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                            <div class="md-form text-left">
+                                                <label >Price</label>
+                                                <input type="text"  class="form-control"/>
+                                            </div>
+                                            <div class="md-form text-left  mb-4">
+                                                <label >Select Image</label>
+                                                <input type="file"  class="form-control"/>
+                                            </div>
+                                            <div class="text-center mb-4">
+                                                        <button type="button" class="btn btn-primary btn-pill">Create Post <i class="fa fa-sign-in ml-1"></i></button>
+                                            </div>
+                                            
+                                        </form>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
